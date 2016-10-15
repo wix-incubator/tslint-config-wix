@@ -1,0 +1,34 @@
+{
+  "name": "tslint-config-wix",
+  "version": "1.0.0",
+  "description": "Shared tslint config for all Wix projects",
+  "scripts": {
+    "build": ":",
+    "test": "mocha --reporter mocha-env-reporter",
+    "release": "wnpm-release",
+    "postpublish": "rm -f npm-shrinkwrap.json"
+  },
+  "main": "tslint.json",
+  "files": [
+    "tslint.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wix/tslint-config-wix.git"
+  },
+  "author": "Shahar Talmi",
+  "homepage": "https://github.com/wix/tslint-config-wix#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "eslint": "^3.0.0",
+    "mocha": "^3.0.0",
+    "mocha-env-reporter": "^1.0.0",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3",
+    "wnpm-ci": "latest"
+  }
+}
