@@ -1,1 +1,1 @@
-const a: string = 'hi!';
+export const a: string = 'hi!';

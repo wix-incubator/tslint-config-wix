@@ -1,1 +1,0 @@
-import {importC} from 'x';

@@ -24,10 +24,10 @@ describe('wix tslint', () => {
   getDirectories(baseDir).forEach(dir => {
     describe(dir, () => {
       it('should pass for valid.ts', () => {
-        tslint(`${baseDir}${dir}/valid.ts`);
+        tslint(`${baseDir}${dir}/valid.ts*`);
       });
       it('should fail for invalid.ts', () => {
-        expect(() => tslint(`${baseDir}${dir}/invalid.ts`)).to.throw();
+        expect(() => tslint(`${baseDir}${dir}/invalid.ts*`)).to.throw();
       });
     });
   })
