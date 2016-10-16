@@ -1,4 +1,4 @@
-# eslint-config-wix
+# tslint-config-wix
 
 > TSLint [shareable config](https://palantir.github.io/tslint/2016/03/31/sharable-configurations-rules.html) for all Wix projects
 
