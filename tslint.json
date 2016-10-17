@@ -1,7 +1,6 @@
 {
   "rules": {
-    "no-internal-module": true,
-    "no-namespace": true,
+    "no-namespace": [true, "allow-declarations"],
     "no-reference": true,
     "only-arrow-functions": [true, "allow-declarations"],
     "typedef-whitespace": [true,

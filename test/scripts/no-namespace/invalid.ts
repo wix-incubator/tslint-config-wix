@@ -1,3 +1,3 @@
-declare namespace a {
+namespace a {
 
 }
