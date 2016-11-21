@@ -17,7 +17,6 @@
     "no-invalid-this": [true, "check-function-in-method"],
     "no-shadowed-variable": true,
     "no-switch-case-fall-through": true,
-    "no-unreachable": true,
     "no-unused-variable": [true, "react"],
     "no-var-keyword": true,
     "switch-default": true,
