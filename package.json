@@ -5,7 +5,7 @@
   "scripts": {
     "build": ":",
     "test": "mocha --reporter mocha-env-reporter",
-    "release": "wnpm-release",
+    "release": "wnpm-release --no-shrinkwrap",
     "postpublish": "rm -f npm-shrinkwrap.json"
   },
   "main": "tslint.json",
