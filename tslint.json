@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "tslint-eslint-rules"
+  ],
   "rules": {
     "no-namespace": [true, "allow-declarations"],
     "no-reference": true,
@@ -25,12 +28,14 @@
     "no-trailing-whitespace": true,
     "trailing-comma": [true, {"singleline": "never"}],
     "class-name": true,
-    "no-consecutive-blank-lines": true,
+    "no-consecutive-blank-lines": [true, 1],
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-shorthand": true,
     "one-line": [true, "check-catch", "check-finally", "check-else", "check-open-brace", "check-whitespace"],
     "quotemark": [true, "single", "jsx-double"],
     "semicolon": [true, "always"],
-    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"]
+    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
+    "import-spacing": true,
+    "object-curly-spacing": [true, "never"]
   }
 }

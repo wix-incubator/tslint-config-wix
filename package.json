@@ -27,7 +27,8 @@
     "eslint": "^3.0.0",
     "mocha": "^3.0.0",
     "mocha-env-reporter": "^1.0.0",
-    "tslint": "^3.15.1",
+    "tslint": "^5.0.0",
+    "tslint-eslint-rules": "^4.0.0",
     "typescript": "~2.0.3",
     "wnpm-ci": "latest"
   }
