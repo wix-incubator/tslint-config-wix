@@ -29,7 +29,7 @@
     "mocha-env-reporter": "^1.0.0",
     "tslint": "^5.0.0",
     "tslint-eslint-rules": "^4.0.0",
-    "typescript": "~2.0.3",
+    "typescript": "^2.2.0",
     "wnpm-ci": "latest"
   }
 }
