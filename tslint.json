@@ -2,6 +2,7 @@
   "extends": [
     "tslint-eslint-rules"
   ],
+  "rulesDirectory": "rules/",
   "rules": {
     "no-namespace": [true, "allow-declarations"],
     "no-reference": true,
@@ -10,6 +11,7 @@
       {"variable-declaration": "nospace", "call-signature": "nospace", "parameter": "nospace", "property-declaration": "nospace"},
       {"variable-declaration": "onespace", "call-signature": "onespace", "parameter": "onespace", "property-declaration": "onespace"}
     ],
+    "no-jasmine-focus": true,
     "curly": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
