@@ -2,8 +2,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const {execSync} = require('child_process');
-const {expect} = require('chai');
+const execSync = require('child_process').execSync;
+const expect = require('chai').expect;
 const glob = require('glob');
 
 const baseDir = './test/scripts/';
