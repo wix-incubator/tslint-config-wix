@@ -2,8 +2,10 @@
 
 const fs = require('fs');
 const path = require('path');
-const expect = require('chai').expect;
-const execSync = require('child_process').execSync;
+const {execSync} = require('child_process');
+const {expect} = require('chai');
+const glob = require('glob');
+
 const baseDir = './test/scripts/';
 
 function getDirectories(srcpath) {
@@ -24,10 +26,12 @@ describe('wix tslint', () => {
   getDirectories(baseDir).forEach(dir => {
     describe(dir, () => {
       it('should pass for valid.ts', () => {
-        tslint(`${baseDir}${dir}/valid.*`);
+        tslint(`${baseDir}${dir}/valid*.*`);
       });
-      it('should fail for invalid.ts', () => {
-        expect(() => tslint(`${baseDir}${dir}/invalid.*`)).to.throw();
+      glob.sync(`${baseDir}${dir}/invalid*.*`).forEach(file => {
+        it(`should fail for ${path.basename(file)}`, () => {
+          expect(() => tslint(file)).to.throw();
+        });
       });
     });
   })
