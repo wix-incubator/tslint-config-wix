@@ -16,18 +16,21 @@ class Rule extends Lint.Rules.AbstractRule {
 }
 
 class NoJasmineFocusWalker extends Lint.RuleWalker {
+  constructor(sourceFile, options) {
+    super(sourceFile, options);
+    if (!this.addFailureAt) {
+      //tslint < 5
+      this.addFailureAt = (nodeStart, length, msg) => {
+        return this.addFailure(this.createFailure(node.getStart(), matchIndex, msg));
+      };
+    }
+  }
+
   visitCallExpression(node) {
     const match = node.expression.getText().match(REGEX);
 
     if (match) {
-      const msg = `Jasmine focus is not allowed (${PROHIBITED_WORDS.join(', ')})`;
-      const matchIndex = match[0].length;
-      if (this.addFailureAt) {
-        this.addFailureAt(node.getStart(), matchIndex, msg);
-      } else {
-        //addFailure is deprecated since tslint 5 (still supported)
-        this.addFailure(this.createFailure(node.getStart(), matchIndex, msg));
-      }
+      this.addFailureAt(node.getStart(), match[0].length, `Jasmine focus is not allowed (${PROHIBITED_WORDS.join(', ')})`);
     }
 
     super.visitCallExpression(node);
