@@ -2,7 +2,7 @@
 
 let Lint = require('tslint');
 if (!Lint.Rules) {
-  //for tslint 3
+  //tslint 3
   Lint = require('tslint/lib/lint');
 }
 
@@ -16,16 +16,6 @@ class Rule extends Lint.Rules.AbstractRule {
 }
 
 class NoJasmineFocusWalker extends Lint.RuleWalker {
-  constructor(sourceFile, options) {
-    super(sourceFile, options);
-    if (!this.addFailureAt) {
-      //tslint < 5
-      this.addFailureAt = (nodeStart, length, msg) => {
-        return this.addFailure(this.createFailure(nodeStart, length, msg));
-      };
-    }
-  }
-
   visitCallExpression(node) {
     const match = node.expression.getText().match(REGEX);
 
@@ -35,6 +25,13 @@ class NoJasmineFocusWalker extends Lint.RuleWalker {
 
     super.visitCallExpression(node);
   }
+}
+
+if (!Lint.RuleWalker.prototype.addFailureAt) {
+  //tslint 3
+  NoJasmineFocusWalker.prototype.addFailureAt = function (nodeStart, length, msg) {
+    return this.addFailure(this.createFailure(nodeStart, length, msg));
+  };
 }
 
 exports.Rule = Rule;
