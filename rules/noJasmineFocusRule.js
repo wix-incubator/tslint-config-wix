@@ -21,7 +21,7 @@ class NoJasmineFocusWalker extends Lint.RuleWalker {
     if (!this.addFailureAt) {
       //tslint < 5
       this.addFailureAt = (nodeStart, length, msg) => {
-        return this.addFailure(this.createFailure(node.getStart(), matchIndex, msg));
+        return this.addFailure(this.createFailure(nodeStart, length, msg));
       };
     }
   }
