@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "include": [
+    "<%= file %>"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

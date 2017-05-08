@@ -38,6 +38,9 @@
     "semicolon": [true, "always"],
     "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
     "import-spacing": true,
-    "object-curly-spacing": [true, "never"]
+    "object-curly-spacing": [true, "never"],
+    "strict-boolean-expressions": {
+      "severity": "warn"
+    }
   }
 }
