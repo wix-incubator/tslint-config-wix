@@ -2,8 +2,9 @@
   "extends": [
     "tslint-eslint-rules"
   ],
-  "rulesDirectory": "rules/",
+  "rulesDirectory": ["rules/", "tslint-consistent-codestyle"],
   "rules": {
+    "no-unused": true,
     "no-namespace": [true, "allow-declarations"],
     "no-reference": true,
     "only-arrow-functions": [true, "allow-declarations"],
