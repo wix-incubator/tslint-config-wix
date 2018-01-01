@@ -23,6 +23,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "tslint-consistent-codestyle": "^1.11.0",
     "tslint-eslint-rules": "^4.0.0"
   },
   "devDependencies": {
