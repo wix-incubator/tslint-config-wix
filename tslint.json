@@ -1,6 +1,7 @@
 {
   "extends": [
-    "tslint-eslint-rules"
+    "tslint-eslint-rules",
+    "tslint-react"
   ],
   "rules": {
     "no-namespace": [true, "allow-declarations"],
@@ -43,6 +44,8 @@
       {"name": "fit", "message":"no-focused-tests"},
       {"name": ["describe", "only"], "message":"no-focused-tests"},
       {"name": ["it", "only"], "message":"no-focused-tests"}
-    ]
+    ],
+    "jsx-no-lambda": false,
+    "jsx-boolean-value": false
   }
 }
