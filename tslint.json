@@ -46,6 +46,6 @@
       {"name": ["it", "only"], "message":"no-focused-tests"}
     ],
     "jsx-no-lambda": false,
-    "jsx-boolean-value": false
+    "jsx-boolean-value": [true, "never"]
   }
 }
