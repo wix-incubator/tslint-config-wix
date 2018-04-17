@@ -10,7 +10,6 @@
   },
   "main": "tslint.json",
   "files": [
-    "rules",
     "tslint.json"
   ],
   "repository": {
