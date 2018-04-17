@@ -48,6 +48,7 @@
     "jsx-no-lambda": false,
     "jsx-boolean-value": [true, "never"],
     "space-in-brackets": ["error", "always"],
-    "arrow-parens": [true, "ban-single-arg-parens"]
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "array-bracket-spacing": [true, "never"]
   }
 }
