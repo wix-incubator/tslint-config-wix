@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-const Comp: React.SFC = () => (
+export const Comp: React.SFC = () => (
   <input
     readOnly
     value="1"
     />
 );
 
-const Comp2: React.SFC = () => (
+export const Comp2: React.SFC = () => (
   <input
     readOnly
     value="1"/>

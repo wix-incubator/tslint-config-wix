@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-const Comp: React.SFC = () => <div></div>;
+export const Comp: React.SFC = () => <div></div>;

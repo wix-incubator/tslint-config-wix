@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-const Comp: React.SFC = () => <input disabled={true}/>;
+export const Comp: React.SFC = () => <input disabled={true}/>;
