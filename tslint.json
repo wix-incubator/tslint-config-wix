@@ -44,6 +44,7 @@
       {"name": "fdescribe", "message":"no-focused-tests"},
       {"name": "fit", "message":"no-focused-tests"},
       {"name": ["describe", "only"], "message":"no-focused-tests"},
+      {"name": ["context", "only"], "message":"no-focused-tests"},
       {"name": ["it", "only"], "message":"no-focused-tests"}
     ],
     "jsx-no-lambda": false,
