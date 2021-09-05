@@ -1,6 +1,8 @@
 {
   "extends": [
-    "tslint-eslint-rules"
+    "tslint-eslint-rules",
+    "tslint-react",
+    "tslint-config-prettier"
   ],
   "rules": {
     "no-namespace": [true, "allow-declarations"],
@@ -42,7 +44,16 @@
       {"name": "fdescribe", "message":"no-focused-tests"},
       {"name": "fit", "message":"no-focused-tests"},
       {"name": ["describe", "only"], "message":"no-focused-tests"},
+      {"name": ["context", "only"], "message":"no-focused-tests"},
       {"name": ["it", "only"], "message":"no-focused-tests"}
-    ]
+    ],
+    "jsx-no-lambda": false,
+    "jsx-boolean-value": [true, "never"],
+    "jsx-alignment": true,
+    "jsx-wrap-multiline": true,
+    "space-in-brackets": ["error", "always"],
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "array-bracket-spacing": [true, "never"],
+    "no-unused-variable": true
   }
 }
